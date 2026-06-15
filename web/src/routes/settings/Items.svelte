@@ -18,6 +18,9 @@
       return { ...s, items: next };
     });
   }
+  function onName(i: number, e: Event) {
+    setName(i, (e.target as HTMLInputElement).value);
+  }
   function remove(i: number) {
     formStore.update((s) => ({ ...s, items: s.items.filter((_, idx) => idx !== i) }));
   }
@@ -43,7 +46,7 @@
       <TextInput
         placeholder="Item"
         value={field.name ?? ''}
-        on:input={(e) => setName(i, e.target.value)}
+        on:input={(e) => onName(i, e)}
       />
       <Tooltip label="Item options" position="left">
         <IconButton on:click={() => openOptions(i)}>

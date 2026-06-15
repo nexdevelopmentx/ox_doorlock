@@ -7,7 +7,7 @@ import type { DoorColumn } from './lib/types';
 
 initNuiListener();
 
-// ── Browser-only debug events (mirrors the original React boilerplate) ──
+// ── Browser-only debug events ──
 debugData<DoorColumn[]>([
   {
     action: 'updateDoorData',

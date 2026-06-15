@@ -31,7 +31,7 @@
     dispatch('change', v);
   }
 
-  function clear(e: MouseEvent) {
+  function clear(e: Event) {
     e.stopPropagation();
     value = null;
     dispatch('change', null);

@@ -22,6 +22,13 @@
       return { ...s, groups: next };
     });
   }
+  function onName(i: number, e: Event) {
+    setName(i, (e.target as HTMLInputElement).value);
+  }
+  function onGrade(i: number, e: Event) {
+    const v = (e.target as HTMLInputElement).value;
+    setGrade(i, v === '' ? null : Number(v));
+  }
   function remove(i: number) {
     formStore.update((s) => ({ ...s, groups: s.groups.filter((_, idx) => idx !== i) }));
   }
@@ -44,7 +51,7 @@
         <TextInput
           placeholder="Group"
           value={field.name ?? ''}
-          on:input={(e) => setName(i, e.target.value)}
+          on:input={(e) => onName(i, e)}
         />
       </div>
       <div class="w-28">
@@ -52,7 +59,7 @@
           <NumberInput
             placeholder="Grade"
             value={field.grade ?? null}
-            on:input={(e) => setGrade(i, e.target.value === '' ? null : Number(e.target.value))}
+            on:input={(e) => onGrade(i, e)}
           />
         {/key}
       </div>

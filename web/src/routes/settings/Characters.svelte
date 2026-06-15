@@ -14,6 +14,9 @@
       return { ...s, characters: next };
     });
   }
+  function onInput(i: number, e: Event) {
+    update(i, (e.target as HTMLInputElement).value);
+  }
   function remove(i: number) {
     formStore.update((s) => ({ ...s, characters: s.characters.filter((_, idx) => idx !== i) }));
   }
@@ -35,7 +38,7 @@
       <TextInput
         placeholder="Character ID"
         value={field ?? ''}
-        on:input={(e) => update(i, e.target.value)}
+        on:input={(e) => onInput(i, e)}
       />
       <Tooltip label="Delete row" position="left">
         <IconButton danger on:click={() => remove(i)}>

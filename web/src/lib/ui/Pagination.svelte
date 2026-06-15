@@ -3,9 +3,9 @@
 
   export let page: number = 1;
   export let total: number = 1;
-  /** Sibling count (Mantine default = 1) */
+  /** Number of page buttons shown on each side of the current page */
   export let siblings: number = 1;
-  /** Boundary count (Mantine default = 1) */
+  /** Number of page buttons always shown at the start and end */
   export let boundaries: number = 1;
 
   function range(start: number, end: number): number[] {
@@ -14,7 +14,7 @@
     return out;
   }
 
-  // Mantine-style truncation: 1 … 4 5 [6] 7 8 … 12
+  // Truncated page range: 1 … 4 5 [6] 7 8 … 12
   $: items = (() => {
     const totalNumbers = siblings * 2 + 3 + boundaries * 2;
     if (total <= totalNumbers) return range(1, total);
