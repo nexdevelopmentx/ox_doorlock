@@ -1,25 +1,13 @@
-# ox_doorlock — NEX Development Redesign
-
-> **Notice:** This is a **NEX Development redesign** of `ox_doorlock`. This resource is **NOT** a NEX Development resource — it is still **Overextended's** resource, just redesigned.
-
-All credit, ownership, and licensing of the underlying resource belong to **Overextended**. NEX Development has only restyled/redesigned the UI and presentation. No claim of ownership is made over the original code.
-
-- Original resource: [communityox/ox_doorlock](https://github.com/communityox/ox_doorlock)
-- Original author: **Overextended**
-- Redesign by: **NEX Development**
-
----
-
 # Ox Doorlock
 
-Door management resource, with compatibility for [ox_core](https://github.com/communityox/ox_core), [es_extended](https://github.com/esx-framework/esx_core), [nd_core](https://github.com/ND-Framework/ND_Core), and [qbox](https://github.com/Qbox-project/qbx_core).  
+Door management resource, with compatibility for [ox_core](https://github.com/overextended/ox_core), [es_extended](https://github.com/esx-framework/esx_core), [nd_core](https://github.com/ND-Framework/ND_Core), and [qbox](https://github.com/Qbox-project/qbx_core).  
 Successor to nui_doorlock with less scuff and more stuff.
 
-_The UI needs to be built - use the [latest release](https://github.com/communityox/ox_doorlock/releases/latest/download/ox_doorlock.zip) if you want to drag-n-drop._
+_The UI needs to be built - use the [latest release](https://github.com/overextended/ox_doorlock/releases/latest/download/ox_doorlock.zip) if you want to drag-n-drop._
 
 ## Dependencies
 
-### [oxmysql](https://github.com/communityox/oxmysql)
+### [oxmysql](https://github.com/overextended/oxmysql)
 
 Doors are stored in a database for ease-of-use and to allow data to be easily cleared or shared.
 
@@ -28,11 +16,11 @@ mysql-async is no longer supported.
   - people use older versions which do not support parameters as arrays
   - it isn't maintained and has issues that will never be resolved
 
-### [ox_lib](https://github.com/communityox/ox_lib) (v2.3.0 or higher)
+### [ox_lib](https://github.com/overextended/ox_lib) (v2.3.0 or higher)
 
 Used for some UI elements (i.e. notifications, progress circle, input), and cache.
 
-### [ox_target](https://github.com/communityox/ox_target) (preferred) or [qtarget](https://github.com/overextended/qtarget) (deprecated)
+### [ox_target](https://github.com/overextended/ox_target) (preferred) or [qtarget](https://github.com/overextended/qtarget) (deprecated)
 
 (Optional) Used for lockpicking.
 
